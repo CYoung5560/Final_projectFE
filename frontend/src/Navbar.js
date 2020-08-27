@@ -3,6 +3,7 @@ import "./App.css";
 import {BrowserRouter,Switch,Route,Link } from "react-router-dom";
 import Gallery from './GalleryPage';
 import Login from './LoginPage';
+import Signup from './SignupPage';
 
 function HomePage(){
   return <h1> Home Page </h1>
@@ -17,6 +18,10 @@ function GalleryPage(){
 }
 function LoginPage(){
   return <Login/>
+}
+
+function SignupPage(){
+  return <Signup/>
 }
 
 function TicketPage(){
@@ -60,6 +65,9 @@ export default class Navbar extends React.Component {
               <Link to="/login"><span class="navbar-brand mb-0 h1">Login</span></Link>
             </li>
             <li class="nav-item">
+              <Link to="/signup"><span class="navbar-brand mb-0 h1">Signup</span></Link>
+            </li>
+            <li class="nav-item">
               <Link to="/tickets"><span class="navbar-brand mb-0 h1">Tickets</span></Link>
             </li>
           </ul>
@@ -81,6 +89,7 @@ export default class Navbar extends React.Component {
           <Route exact path="/about/" component={AboutusPage} />
           <Route exact path="/gallery/" component={GalleryPage} />
           <Route exact path="/login/" component={LoginPage} />
+          <Route exact path="/signup/" component={SignupPage} />
           <Route exact path="/tickets/" component={TicketPage} />
         </Switch>
       </BrowserRouter>
