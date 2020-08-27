@@ -1,8 +1,12 @@
 import React from "react";
 import "./App.css";
+import {BrowserRouter,Switch,Route,Link } from "react-router-dom"
 //import test from './myCompontent';
 import NavBar from './NavBar';
 import Footer from './Footer';
+
+
+
 
 function App() {
   return (
@@ -13,7 +17,7 @@ function App() {
           <NavBar/>          
         </header>
       </div>
-    
+     
       <div className="App">
         <Footer/>
       </div>

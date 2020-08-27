@@ -13,7 +13,7 @@ export default class PersonList extends React.Component {
     return (
       
       <div>
-        Gallery Page
+        Welcome to the Gallery Page
       </div>
     )
   }
