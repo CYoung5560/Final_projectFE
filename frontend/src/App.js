@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.css";
-import test from './myCompontent';
+//import test from './myCompontent';
 import NavBar from './NavBar';
+import Footer from './Footer';
 
 function App() {
   return (
@@ -12,7 +13,12 @@ function App() {
           <NavBar/>          
         </header>
       </div>
+    
+      <div className="App">
+        <Footer/>
+      </div>
     </div>
+
   
   );
 }

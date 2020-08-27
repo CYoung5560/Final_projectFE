@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-//import axios from 'axios';
+
 // Nav bar component
-export default class PersonList extends React.Component {
+export default class Navbar extends React.Component {
   render() {
     return (
        
@@ -21,7 +21,7 @@ export default class PersonList extends React.Component {
         <a class="nav-link" href="#">Link</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

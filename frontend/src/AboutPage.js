@@ -13,7 +13,7 @@ export default class PersonList extends React.Component {
     return (
       
       <div>
-      Home Page
+        Home Page
       </div>
     )
   }
