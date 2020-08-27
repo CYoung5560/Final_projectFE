@@ -1,18 +1,18 @@
 import React from "react";
 import "./App.css";
-import "./signin.css";
+import "./signup.css";
 
 export default class Signup extends React.Component {
   render() {
     return (
       <div>
-        <div class="container">
-          <div class="row">
-            
+        <br></br>
+        <br></br>
+        <form class="form-signup">
             <div class="col-md-8 order-md-1">
               <h4 class="mb-3">Welcome! Please enter your details</h4>
-
-              <form class="needs-validation" method="POST" id="formCreateCustomer" novalidate>
+              
+              <form class="needs-validation" id="formCreateCustomer" novalidate>
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label for="name">Name</label>
@@ -93,11 +93,11 @@ export default class Signup extends React.Component {
                     </div>
                 </div>
                 <br></br>
-              </form>
-        </div>
-        </div>
-       </div>
+              </form>  
+          </div>
+          </form>
       </div>
+      
     );
   }
 }
