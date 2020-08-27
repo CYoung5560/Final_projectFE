@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import {BrowserRouter,Switch,Route,Link } from "react-router-dom";
 import Gallery from './GalleryPage';
+import Login from './LoginPage';
 
 function HomePage(){
   return <h1> Home Page </h1>
@@ -13,6 +14,9 @@ function AboutusPage(){
 
 function GalleryPage(){
   return <Gallery/>
+}
+function LoginPage(){
+  return <Login/>
 }
 
 function TicketPage(){
@@ -44,13 +48,19 @@ export default class Navbar extends React.Component {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-            <Link to="/">Home</Link>
+              <Link to="/"><span class="navbar-brand mb-0 h1">Home</span></Link>
             </li>
             <li class="nav-item">
-            <Link to="/about">About</Link>
+              <Link to="/about"><span class="navbar-brand mb-0 h1">About</span></Link>
             </li>
             <li class="nav-item">
-            <Link to="/gallery">Gallery</Link>
+              <Link to="/gallery"><span class="navbar-brand mb-0 h1">Gallery</span></Link>
+            </li>
+            <li class="nav-item">
+              <Link to="/login"><span class="navbar-brand mb-0 h1">Login</span></Link>
+            </li>
+            <li class="nav-item">
+              <Link to="/tickets"><span class="navbar-brand mb-0 h1">Tickets</span></Link>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -70,6 +80,7 @@ export default class Navbar extends React.Component {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/about/" component={AboutusPage} />
           <Route exact path="/gallery/" component={GalleryPage} />
+          <Route exact path="/login/" component={LoginPage} />
           <Route exact path="/tickets/" component={TicketPage} />
         </Switch>
       </BrowserRouter>
