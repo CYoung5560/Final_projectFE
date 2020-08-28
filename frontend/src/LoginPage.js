@@ -1,24 +1,58 @@
 import React from "react";
 import "./App.css";
 import "./signin.css";
+import axios from 'axios';
 
 export default class Login extends React.Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: '',
+      password: ''};
+  }
+
+  handleUsernameChange = (event) => {
+    this.setState({ username: event.target.value });
+  };
+
+  handlePasswordChange = (event) => {
+    this.setState({ password: event.target.value });
+  };
+
+  handleSubmit = (event) => {
+    const user = {
+      "username": this.state.username,
+      "password": this.state.password
+    };
+
+    event.preventDefault();
+    axios.post('http://localhost:8000/login', user)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   render() {
     return (
       <div>
-            <form class="form-signin">
+            <form class="form-signin" onSubmit={this.handleSubmit}>
               <h1 class="h3 mb-3 font-weight-normal">
                 Welcome! Please sign in
               </h1>
-              <label for="email" class="sr-only">
-                Email address
+              <label for="username" class="sr-only">
+                Username
               </label>
               <input
-                type="email"
+                onChange={this.handleUsernameChange}
+                type="username"
                 name="username"
                 id="customerEmail"
                 class="form-control"
-                placeholder="Email address"
+                placeholder="Username"
                 required
                 autofocus
               ></input>
@@ -27,6 +61,7 @@ export default class Login extends React.Component {
                 Password
               </label>
               <input
+                onChange={this.handlePasswordChange}
                 type="password"
                 name="userpwd"
                 id="customerPassword"
@@ -48,8 +83,6 @@ export default class Login extends React.Component {
                 Sign in
               </button>
             </form>
-          
-       
       </div>
     );
   }
