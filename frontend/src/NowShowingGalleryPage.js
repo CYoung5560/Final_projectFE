@@ -4,6 +4,8 @@ export default class PersonList extends React.Component {
   render() {
     return (
       <div>
+        <br></br>
+        <br></br>
         {/* Jumbotron Header screen 1*/}
         <section class="jumbotron text-center">
           <div class="container">
@@ -78,8 +80,12 @@ export default class PersonList extends React.Component {
                   </div>
                 </div>
               </div>
-              {/* End of gallery cards for screen 1 */}
 
+              </div>
+              </div>
+              {/* End of gallery cards for screen 1 */}
+              <br></br>
+              <br></br>
               {/* Jumbotron Header screen 2*/}
               <section class="jumbotron text-center">
                 <div class="container">
@@ -87,9 +93,12 @@ export default class PersonList extends React.Component {
                   {/* <p class="lead text-muted">Screen 1</p> */}
                 </div>
               </section>
-
+              <br></br>
               {/* Start of gallery cards for screen 2 */}
-              <div class="col-md-4">
+            <div class="album py-5 bg-light">
+              <div class="container">
+                <div class="row">
+                <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
                   <img
                     src=""
@@ -151,10 +160,12 @@ export default class PersonList extends React.Component {
                   </div>
                 </div>
               </div>
-              {/* End of gallery cards for screen 1 */}
+              </div>
             </div>
-          </div>
+              {/* End of gallery cards for screen 1 */}
+           
         </div>
+      </div>
       </div>
     );
   }
