@@ -7,7 +7,7 @@ export default class PersonList extends React.Component {
       
       <div>
         <div class="album py-5 bg-light">
-        <div class="container">
+          <div class="container">
     
           <div class="row">
             <div class="col-md-4">
@@ -136,12 +136,9 @@ export default class PersonList extends React.Component {
                   </div>
                 </div>
               </div>
-           
-
-              
-              </div>
-              </div>
-              </div>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
