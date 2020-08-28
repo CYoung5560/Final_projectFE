@@ -6,6 +6,13 @@ export default class PersonList extends React.Component {
     return (
       
       <div>
+         <section class="jumbotron text-center">
+          <div class="container">
+            <h1>Now Showing</h1>
+            <p class="lead text-muted">She Felt Good is a collection or original needle felted characters.</p>
+          
+          </div>
+        </section>
         <div class="album py-5 bg-light">
           <div class="container">
     
