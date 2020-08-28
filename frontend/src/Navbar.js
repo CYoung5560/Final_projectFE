@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import {BrowserRouter,Switch,Route,Link } from "react-router-dom";
-import Gallery from './GalleryPage';
+import Gallery from './NowShowingGalleryPage';
 import Login from './LoginPage';
 import Signup from './SignupPage';
 
