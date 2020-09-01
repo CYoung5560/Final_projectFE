@@ -64,7 +64,7 @@ class CheckoutCardForm extends React.Component {
             mode: "cors",
             // credentials: "include",
             headers: {
-                'Authorization': token
+                'Authorization': 'Bearer ' + token
             }
         }).then((response) => response.json())
             .then((response) => {
