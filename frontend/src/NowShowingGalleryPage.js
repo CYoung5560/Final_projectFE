@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-import ModalGallery from './ModalGallery';
+import ModalGButton from './ModalGButton.js';
 
-export default class PersonList extends React.Component {
+export default class NowShowingGallery extends React.Component {
   render() {
     return (
       <div>
@@ -35,7 +35,9 @@ export default class PersonList extends React.Component {
                       <div class="btn-group">
                         <a href="/signup" role="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</a>
                         <a href="https://www.imdb.com/title/tt0087363/" target="_blank" role="button" class="btn btn-sm btn-outline-secondary">IMDB</a>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onClick={ModalGallery}>More Info</button>
+                        <ModalGButton/>
+                         
+                        {/* <button type="button" class="btn btn-sm btn-outline-secondary" onClick={this.showModal}>More Info</button> */}
                       </div>
                     </div>
                   </div>
