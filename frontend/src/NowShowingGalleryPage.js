@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+
 export default class PersonList extends React.Component {
   render() {
     return (
@@ -21,18 +22,18 @@ export default class PersonList extends React.Component {
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
                   <img
-                    src=""
+                    alt="Gremlins" 
+                    src={require('./images/gremlins_500px.jpg')}
                     width="100%"
                     height="100%"
                     class="img-responsive"
                   ></img>
                   <div class="card-body">
-                    <p class="card-text">Movie</p>
+                    <p class="card-text">Blast from the Past: Gremlins</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-secondary">
-                          Coming soon!
-                        </button>
+                      <a href="/signup" role="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</a>
+                      <a href="https://www.imdb.com/title/tt0087363/" target="_blank" role="button" class="btn btn-sm btn-outline-secondary">IMDB</a>
                       </div>
                     </div>
                   </div>
@@ -42,18 +43,18 @@ export default class PersonList extends React.Component {
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
                   <img
-                    src=""
+                    alt="Gremlins" 
+                    src="images/gremlins_500px.png"
                     width="100%"
                     height="100%"
                     class="img-responsive"
                   ></img>
                   <div class="card-body">
-                    <p class="card-text">Movie</p>
+                    <p class="card-text">Late night horror: Sea Fever</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-secondary">
-                          Coming soon!
-                        </button>
+                      <a href="/signup" role="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</a>
+                      <a href="https://www.imdb.com/title/tt0087363/" target="_blank" role="button" class="btn btn-sm btn-outline-secondary">IMDB</a>
                       </div>
                     </div>
                   </div>
@@ -63,26 +64,27 @@ export default class PersonList extends React.Component {
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
                   <img
-                    src=""
+                    alt="Gremlins" 
+                    src="images/gremlins_500px.png"
                     width="100%"
                     height="100%"
                     class="img-responsive"
                   ></img>
                   <div class="card-body">
-                    <p class="card-text">Movie</p>
+                    <p class="card-text">Matinee: Howl's Moving Castle</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-secondary">
-                          Coming soon!
-                        </button>
+                      <a href="/signup" role="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</a>
+                      <a href="https://www.imdb.com/title/tt0087363/" target="_blank" role="button" class="btn btn-sm btn-outline-secondary">IMDB</a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              </div>
-              </div>
+            </div>
+          </div>
+        </div>
               {/* End of gallery cards for screen 1 */}
               <br></br>
               <br></br>
@@ -101,18 +103,18 @@ export default class PersonList extends React.Component {
                 <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
                   <img
-                    src=""
+                    alt="Gremlins" 
+                    src="images/gremlins_500px.png"
                     width="100%"
                     height="100%"
                     class="img-responsive"
                   ></img>
                   <div class="card-body">
-                    <p class="card-text">Movie</p>
+                    <p class="card-text">Blast from the past: Goonies</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-secondary">
-                          Coming soon!
-                        </button>
+                      <a href="/signup" role="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</a>
+                      <a href="https://www.imdb.com/title/tt0087363/" target="_blank" role="button" class="btn btn-sm btn-outline-secondary">IMDB</a>
                       </div>
                     </div>
                   </div>
@@ -122,18 +124,18 @@ export default class PersonList extends React.Component {
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
                   <img
-                    src=""
+                    alt="Gremlins" 
+                    src="images/gremlins_500px.png"
                     width="100%"
                     height="100%"
                     class="img-responsive"
                   ></img>
                   <div class="card-body">
-                    <p class="card-text">Movie</p>
+                    <p class="card-text">Late night Horror: Hellraiser</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-secondary">
-                          Coming soon!
-                        </button>
+                      <a href="/signup" role="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</a>
+                      <a href="https://www.imdb.com/title/tt0087363/" target="_blank" role="button" class="btn btn-sm btn-outline-secondary">IMDB</a>
                       </div>
                     </div>
                   </div>
@@ -143,25 +145,26 @@ export default class PersonList extends React.Component {
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
                   <img
-                    src=""
+                    alt="Gremlins" 
+                    src="images/gremlins_500px.png"
                     width="100%"
                     height="100%"
                     class="img-responsive"
                   ></img>
                   <div class="card-body">
-                    <p class="card-text">Movie</p>
+                    <p class="card-text">Matinee: Spririted Away</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-secondary">
-                          Coming soon!
-                        </button>
+                      <a href="/signup" role="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</a>
+                      <a href="https://www.imdb.com/title/tt0087363/" target="_blank" role="button" class="btn btn-sm btn-outline-secondary">IMDB</a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              </div>
+
             </div>
+          
               {/* End of gallery cards for screen 1 */}
            
         </div>

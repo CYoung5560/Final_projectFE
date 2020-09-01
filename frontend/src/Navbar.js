@@ -1,9 +1,11 @@
 import React from "react";
 import "./App.css";
+// npm install react-router-dom
 import {BrowserRouter,Switch,Route,Link } from "react-router-dom";
 import Gallery from './NowShowingGalleryPage';
 import Login from './LoginPage';
 import Signup from './SignupPage';
+import Contact from './ContactPage';
 
 function HomePage(){
   return <h1> Home Page </h1>
@@ -16,6 +18,9 @@ function AboutusPage(){
 function GalleryPage(){
   return <Gallery/>
 }
+// This is the component the router will return
+// The return name matches with the import name
+// The function name matches the route component name
 function LoginPage(){
   return <Login/>
 }
@@ -28,15 +33,24 @@ function TicketPage(){
   return <h1> Ticket Page </h1>
 }
 
+function ContactPage(){
+   return <Contact/>
+}
+const logoStyle = {
+  height: '150px',
+  width: '150px'
+};
+
 // Nav bar component
 export default class Navbar extends React.Component {
   render() {
     return (
+      
 
       <BrowserRouter>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-          QA DRIVE IN
+        <a class="navbar-brand" href="/">
+        <img src={require('./images/finalLogo_500px.png')} alt="QA logo 500px" style={logoStyle}/>
         </a>
         <button
           class="navbar-toggler"
@@ -70,6 +84,10 @@ export default class Navbar extends React.Component {
             <li class="nav-item">
               <Link to="/tickets"><span class="navbar-brand mb-0 h1">Tickets</span></Link>
             </li>
+            <li class="nav-item">
+              <Link to="/contact"><span class="navbar-brand mb-0 h1">Contact Us</span></Link>
+            </li>
+            
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input
@@ -90,6 +108,7 @@ export default class Navbar extends React.Component {
           <Route exact path="/gallery/" component={GalleryPage} />
           <Route exact path="/login/" component={LoginPage} />
           <Route exact path="/signup/" component={SignupPage} />
+          <Route exact path="/contact/" component={ContactPage} />
           <Route exact path="/tickets/" component={TicketPage} />
         </Switch>
       </BrowserRouter>
