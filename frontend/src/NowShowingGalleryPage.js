@@ -36,8 +36,6 @@ export default class NowShowingGallery extends React.Component {
                         <a href="/signup" role="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</a>
                         <a href="https://www.imdb.com/title/tt0087363/" target="_blank" role="button" class="btn btn-sm btn-outline-secondary">IMDB</a>
                         <ModalGButton/>
-                         
-                        {/* <button type="button" class="btn btn-sm btn-outline-secondary" onClick={this.showModal}>More Info</button> */}
                       </div>
                     </div>
                   </div>
@@ -59,6 +57,7 @@ export default class NowShowingGallery extends React.Component {
                       <div class="btn-group">
                       <a href="/signup" role="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</a>
                       <a href="https://www.imdb.com/title/tt0087363/" target="_blank" role="button" class="btn btn-sm btn-outline-secondary">IMDB</a>
+                      <ModalGButton/>
                       </div>
                     </div>
                   </div>
@@ -80,6 +79,7 @@ export default class NowShowingGallery extends React.Component {
                       <div class="btn-group">
                       <a href="/signup" role="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</a>
                       <a href="https://www.imdb.com/title/tt0087363/" target="_blank" role="button" class="btn btn-sm btn-outline-secondary">IMDB</a>
+                      <ModalGButton/>
                       </div>
                     </div>
                   </div>
@@ -119,6 +119,7 @@ export default class NowShowingGallery extends React.Component {
                       <div class="btn-group">
                       <a href="/signup" role="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</a>
                       <a href="https://www.imdb.com/title/tt0087363/" target="_blank" role="button" class="btn btn-sm btn-outline-secondary">IMDB</a>
+                      <ModalGButton/>
                       </div>
                     </div>
                   </div>
@@ -140,6 +141,7 @@ export default class NowShowingGallery extends React.Component {
                       <div class="btn-group">
                       <a href="/signup" role="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</a>
                       <a href="https://www.imdb.com/title/tt0087363/" target="_blank" role="button" class="btn btn-sm btn-outline-secondary">IMDB</a>
+                      <ModalGButton/>
                       </div>
                     </div>
                   </div>
@@ -161,6 +163,7 @@ export default class NowShowingGallery extends React.Component {
                       <div class="btn-group">
                       <a href="/signup" role="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</a>
                       <a href="https://www.imdb.com/title/tt0087363/" target="_blank" role="button" class="btn btn-sm btn-outline-secondary">IMDB</a>
+                      <ModalGButton/>
                       </div>
                     </div>
                   </div>

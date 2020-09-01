@@ -3,6 +3,8 @@ import Modal from "react";
 import Button from "react";
 import "./App.css";
 
+// ModalGButton can take in argument values to populate the Modal
+
 export default class ModalGButton extends React.Component {
   constructor() {
     super();
@@ -23,7 +25,7 @@ export default class ModalGButton extends React.Component {
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLongTitle">
-                  Modal title
+                  **Film Title**
                 </h5>
                 <button
                   type="button"
@@ -34,11 +36,11 @@ export default class ModalGButton extends React.Component {
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="modal-body">...</div>
+              <div class="modal-body">More film info ... </div>
               <div class="modal-footer">
                 <button
                   type="button"
-                  class="btn btn-secondary"
+                  class="btn btn-sm btn-outline-secondary"
                   data-dismiss="modal"
                 >
                   Close
