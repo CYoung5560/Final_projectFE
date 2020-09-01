@@ -42,9 +42,9 @@ export default class PersonList extends React.Component {
 
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                  <img
+                <img
                     alt="Gremlins" 
-                    src="images/gremlins_500px.png"
+                    src={require('./images/gremlins_500px.jpg')}
                     width="100%"
                     height="100%"
                     class="img-responsive"
@@ -63,9 +63,9 @@ export default class PersonList extends React.Component {
 
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                  <img
+                <img
                     alt="Gremlins" 
-                    src="images/gremlins_500px.png"
+                    src={require('./images/gremlins_500px.jpg')}
                     width="100%"
                     height="100%"
                     class="img-responsive"
@@ -102,9 +102,9 @@ export default class PersonList extends React.Component {
                 <div class="row">
                 <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                  <img
+                <img
                     alt="Gremlins" 
-                    src="images/gremlins_500px.png"
+                    src={require('./images/gremlins_500px.jpg')}
                     width="100%"
                     height="100%"
                     class="img-responsive"
@@ -123,9 +123,9 @@ export default class PersonList extends React.Component {
 
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                  <img
+                <img
                     alt="Gremlins" 
-                    src="images/gremlins_500px.png"
+                    src={require('./images/gremlins_500px.jpg')}
                     width="100%"
                     height="100%"
                     class="img-responsive"
@@ -144,9 +144,9 @@ export default class PersonList extends React.Component {
 
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                  <img
+                <img
                     alt="Gremlins" 
-                    src="images/gremlins_500px.png"
+                    src={require('./images/gremlins_500px.jpg')}
                     width="100%"
                     height="100%"
                     class="img-responsive"
