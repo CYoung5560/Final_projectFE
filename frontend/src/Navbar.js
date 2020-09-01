@@ -74,8 +74,17 @@ export default class Navbar extends React.Component {
             <li class="nav-item active">
               <Link to="/"><span class="navbar-brand mb-0 h1">Home</span></Link>
             </li>
+             {/* Dropdown */}
             <li class="nav-item">
-              <Link to="/about"><span class="navbar-brand mb-0 h1">About</span></Link>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="/about">About Us</a>
+                <a class="dropdown-item" href="/contact">Contact Us</a> 
+              </div>
+            </div>
             </li>
             <li class="nav-item">
               <Link to="/gallery"><span class="navbar-brand mb-0 h1">Gallery</span></Link>
@@ -90,12 +99,10 @@ export default class Navbar extends React.Component {
               <Link to="/tickets"><span class="navbar-brand mb-0 h1">Tickets</span></Link>
             </li>
             <li class="nav-item">
-              <Link to="/contact"><span class="navbar-brand mb-0 h1">Contact Us</span></Link>
-            </li>
-            <li class="nav-item">
               <Link to="/booking"><span class="navbar-brand mb-0 h1">Booking</span></Link>
             </li>
           </ul>
+          {/* Search bar */}
           <form class="form-inline my-2 my-lg-0">
             <input
               class="form-control mr-sm-2"
