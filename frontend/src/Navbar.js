@@ -6,6 +6,7 @@ import Gallery from './NowShowingGalleryPage';
 import Login from './LoginPage';
 import Signup from './SignupPage';
 import Contact from './ContactPage';
+import Booking from './BookingPage';
 
 function HomePage(){
   return <h1> Home Page </h1>
@@ -35,6 +36,10 @@ function TicketPage(){
 
 function ContactPage(){
    return <Contact/>
+}
+
+function BookingPage(){
+  return <Booking/>
 }
 const logoStyle = {
   height: '150px',
@@ -87,7 +92,9 @@ export default class Navbar extends React.Component {
             <li class="nav-item">
               <Link to="/contact"><span class="navbar-brand mb-0 h1">Contact Us</span></Link>
             </li>
-            
+            <li class="nav-item">
+              <Link to="/booking"><span class="navbar-brand mb-0 h1">Booking</span></Link>
+            </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input
@@ -110,6 +117,7 @@ export default class Navbar extends React.Component {
           <Route exact path="/signup/" component={SignupPage} />
           <Route exact path="/contact/" component={ContactPage} />
           <Route exact path="/tickets/" component={TicketPage} />
+          <Route exact path="/booking/" component={BookingPage} />
         </Switch>
       </BrowserRouter>
     );
