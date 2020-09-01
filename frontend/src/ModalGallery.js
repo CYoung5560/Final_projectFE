@@ -4,18 +4,32 @@ import "./App.css";
 import { Modal } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 
-const [show, setShow] = useState(false);
+// const [show, setShow] = useState(false);
 
-const handleClose = () => setShow(false);
-const handleShow = () => setShow(true);
+// const handleClose = () => setShow(false);
+// const handleShow = () => setShow(true);
 
 export default class ModalGallery extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      show: false
+    }
+  }
+
+  setShow = (bool) => {this.setState( { show: bool }); };
+
+  handleClose = () => { this.setShow(false); };
+
+  handleShow = () => { this.setShow(true); };
+
   render() {
     return (
       <div>
         <Modal
-          show={show}
-          onHide={handleClose}
+          show={this.show}
+          onHide={this.handleClose}
           backdrop="static"
           keyboard={false}
         >
@@ -27,7 +41,7 @@ export default class ModalGallery extends React.Component {
             escape key.
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
+            <Button variant="secondary" onClick={this.handleClose}>
               Close
             </Button>
             <Button variant="primary">Understood</Button>
