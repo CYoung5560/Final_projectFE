@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import ModalGallery from './ModalGallery';
 
 export default class PersonList extends React.Component {
   render() {
@@ -32,8 +33,9 @@ export default class PersonList extends React.Component {
                     <p class="card-text">Blast from the Past: Gremlins</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                      <a href="/signup" role="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</a>
-                      <a href="https://www.imdb.com/title/tt0087363/" target="_blank" role="button" class="btn btn-sm btn-outline-secondary">IMDB</a>
+                        <a href="/signup" role="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</a>
+                        <a href="https://www.imdb.com/title/tt0087363/" target="_blank" role="button" class="btn btn-sm btn-outline-secondary">IMDB</a>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" onClick={ModalGallery}>More Info</button>
                       </div>
                     </div>
                   </div>
