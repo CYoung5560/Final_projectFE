@@ -1,15 +1,17 @@
 import React from "react";
 import "./App.css";
 // npm install react-router-dom
-import {BrowserRouter,Switch,Route,Link } from "react-router-dom";
+import {BrowserRouter,Switch,Route,Link, useParams} from "react-router-dom";
 import Gallery from './NowShowingGalleryPage';
 import Login from './LoginPage';
 import Signup from './SignupPage';
 import Contact from './ContactPage';
 import Booking from './BookingPage';
+import Home from './HomePage';
+//import Individual from './IndividualGalleryPage';
 
 function HomePage(){
-  return <h1> Home Page </h1>
+  return <Home/>
 }
 
 function AboutusPage(){
@@ -41,6 +43,7 @@ function ContactPage(){
 function BookingPage(){
   return <Booking/>
 }
+
 const logoStyle = {
   height: '150px',
   width: '150px'
@@ -125,8 +128,42 @@ export default class Navbar extends React.Component {
           <Route exact path="/contact/" component={ContactPage} />
           <Route exact path="/tickets/" component={TicketPage} />
           <Route exact path="/booking/" component={BookingPage} />
+          <Route path="/individual/:movieName" children={<Child />}/>
         </Switch>
       </BrowserRouter>
     );
   }
+}
+
+
+function Child() {
+  
+  let { movieName } = useParams();
+  return (
+    <div>
+      <br/><br/>
+    <section class="jumbotron text-center">
+          <div class="container">
+          <h2> Now showing {movieName}!</h2>
+          
+          </div>
+        </section>
+        <img
+                    alt="Gremlins" 
+                    src={require('./images/gremlins_500px.jpg')}
+                    width="100%"
+                    height="100%"
+                    class="img-responsive"
+          ></img>
+          <br/><br/>
+        <section class="jumbotron text-center">
+          <div class="container">
+          <h2> Discussion Board</h2>
+          
+          </div>
+        </section>
+        </div>
+
+      
+  );
 }

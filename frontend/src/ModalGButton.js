@@ -1,6 +1,4 @@
 import React from "react";
-import Modal from "react";
-import Button from "react";
 import "./App.css";
 
 // ModalGButton can take in argument values to populate the Modal
