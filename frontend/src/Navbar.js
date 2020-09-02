@@ -13,7 +13,8 @@ import Contact from "./ContactPage";
 import Booking from "./BookingPage";
 import Home from "./HomePage";
 import FindUs from "./FindUsPage";
-//import Individual from './IndividualGalleryPage';
+import How from "./HowItWorksPage";
+
 
 function HomePage() {
   return <Home />;
@@ -51,6 +52,10 @@ function ContactPage() {
 
 function FindUsPage() {
   return <FindUs />;
+}
+
+function HowItWorksPage() {
+  return <How />;
 }
 
 
@@ -124,6 +129,9 @@ export default class Navbar extends React.Component {
                     <a class="dropdown-item" href="/findus">
                       Find Us
                     </a>
+                    <a class="dropdown-item" href="/how">
+                      How It Works
+                    </a>
                   </div>
                 </div>
               </li>
@@ -179,6 +187,7 @@ export default class Navbar extends React.Component {
           <Route exact path="/signup/" component={SignupPage} />
           <Route exact path="/contact/" component={ContactPage} />
           <Route exact path="/findus/" component={FindUsPage} />
+          <Route exact path="/how/" component={HowItWorksPage} />
           <Route exact path="/tickets/" component={TicketPage} />
           <Route exact path="/booking/" component={BookingPage} />
           <Route path="/individual/:movieName" children={<Child />} />
