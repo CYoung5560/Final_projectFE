@@ -4,7 +4,9 @@ import "./carousel.css";
 
 // npm install react-router-dom
 import {BrowserRouter,Switch,Route, Link,useParams,} from "react-router-dom";
+
 import Gallery from "./NowShowingGalleryPage";
+import Recent from "./RecentGalleryPage";
 import Login from "./LoginPage";
 import Signup from "./SignupPage";
 import Contact from "./ContactPage";
@@ -22,6 +24,10 @@ function AboutusPage() {
 
 function GalleryPage() {
   return <Gallery />;
+}
+
+function RecentPage() {
+  return <Recent />;
 }
 // This is the component the router will return
 // The return name matches with the import name
@@ -106,6 +112,9 @@ export default class Navbar extends React.Component {
                     <a class="dropdown-item" href="/contact">
                       Contact Us
                     </a>
+                    <a class="dropdown-item" href="/recent">
+                      Recent Films
+                    </a>
                   </div>
                 </div>
               </li>
@@ -156,6 +165,7 @@ export default class Navbar extends React.Component {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/about/" component={AboutusPage} />
           <Route exact path="/gallery/" component={GalleryPage} />
+          <Route exact path="/recent/" component={RecentPage} />
           <Route exact path="/login/" component={LoginPage} />
           <Route exact path="/signup/" component={SignupPage} />
           <Route exact path="/contact/" component={ContactPage} />
@@ -176,7 +186,7 @@ function Child() {
       <br />
       <section class="jumbotron text-center">
         <div class="container">
-          <h2> Now showing {movieName}!</h2>
+          <h2>{movieName}!</h2>
         </div>
       </section>
       <div class="container  backgroundColour marketing">

@@ -47,13 +47,14 @@ export default class NowShowingGallery extends React.Component {
 
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                <img
+                <Link to={"./individual/Gremlins"}>
+                 <img
                     alt="Gremlins" 
                     src={require('./images/gremlins_500px.jpg')}
                     width="100%"
                     height="100%"
                     class="img-responsive"
-                  ></img>
+                  ></img></Link>
                   <div class="card-body">
                     <p class="card-text">Late night horror: Sea Fever</p>
                     <div class="d-flex justify-content-between align-items-center">
@@ -69,13 +70,14 @@ export default class NowShowingGallery extends React.Component {
 
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                <img
+                <Link to={"./individual/Gremlins"}>
+                 <img
                     alt="Gremlins" 
                     src={require('./images/gremlins_500px.jpg')}
                     width="100%"
                     height="100%"
                     class="img-responsive"
-                  ></img>
+                  ></img></Link>
                   <div class="card-body">
                     <p class="card-text">Matinee: Howl's Moving Castle</p>
                     <div class="d-flex justify-content-between align-items-center">
@@ -109,13 +111,14 @@ export default class NowShowingGallery extends React.Component {
                 <div class="row">
                 <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                <img
+                <Link to={"./individual/Gremlins"}>
+                 <img
                     alt="Gremlins" 
                     src={require('./images/gremlins_500px.jpg')}
                     width="100%"
                     height="100%"
                     class="img-responsive"
-                  ></img>
+                  ></img></Link>
                   <div class="card-body">
                     <p class="card-text">Blast from the past: Goonies</p>
                     <div class="d-flex justify-content-between align-items-center">
@@ -131,13 +134,14 @@ export default class NowShowingGallery extends React.Component {
 
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                <img
+                <Link to={"./individual/Gremlins"}>
+                 <img
                     alt="Gremlins" 
                     src={require('./images/gremlins_500px.jpg')}
                     width="100%"
                     height="100%"
                     class="img-responsive"
-                  ></img>
+                  ></img></Link>
                   <div class="card-body">
                     <p class="card-text">Late night Horror: Hellraiser</p>
                     <div class="d-flex justify-content-between align-items-center">
@@ -153,13 +157,14 @@ export default class NowShowingGallery extends React.Component {
 
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                <img
+                <Link to={"./individual/Gremlins"}>
+                 <img
                     alt="Gremlins" 
                     src={require('./images/gremlins_500px.jpg')}
                     width="100%"
                     height="100%"
                     class="img-responsive"
-                  ></img>
+                  ></img></Link>
                   <div class="card-body">
                     <p class="card-text">Matinee: Spririted Away</p>
                     <div class="d-flex justify-content-between align-items-center">
@@ -175,7 +180,7 @@ export default class NowShowingGallery extends React.Component {
 
             </div>
           
-              {/* End of gallery cards for screen 1 */}
+              {/* End of gallery cards for screen 2 */}
            
         </div>
       </div>
