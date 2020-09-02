@@ -8,19 +8,20 @@ import Signup from './SignupPage';
 import Contact from './ContactPage';
 import Booking from './BookingPage';
 
-import CheckoutForm from './CheckoutForm';
-import { Elements } from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js';
-
-const stripePromise = loadStripe('pk_test_51HMY0fEd3ZxUQOxh20BNoEy4CSrSXrgHasSIJrln7bq9eJxea1xhfzdIJfipIZPK82EAcYZBGoHAba0ViHEL75vn00copwcpzI');
+// For Stripe
+// import CheckoutForm from './CheckoutForm';
+// import { Elements } from '@stripe/react-stripe-js';
+// import { loadStripe } from '@stripe/stripe-js';
+// const stripePromise = loadStripe('pk_test_51HMY0fEd3ZxUQOxh20BNoEy4CSrSXrgHasSIJrln7bq9eJxea1xhfzdIJfipIZPK82EAcYZBGoHAba0ViHEL75vn00copwcpzI');
+// Below inside render/return
+// <Elements stripe={stripePromise} elements={CheckoutForm}>
+//         <CheckoutForm />
+// </Elements>
 
 function HomePage() {
   return (
     <div>
       <h1> Home Page </h1>
-      <Elements stripe={stripePromise} elements={CheckoutForm}>
-        <CheckoutForm />
-      </Elements>
     </div>
   );
 }
