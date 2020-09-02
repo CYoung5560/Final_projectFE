@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./App.css";
 import ModalGButton from "./ModalGButton.js";
 
-export default class RecentGallery extends React.Component {
+export default class NewReleasesGallery extends React.Component {
   render() {
     return (
       <div>
@@ -12,8 +12,8 @@ export default class RecentGallery extends React.Component {
         {/* Jumbotron Header screen 1*/}
         <section class="jumbotron text-center">
           <div class="container">
-            <h1>Recent films</h1>
-            <p class="lead text-muted">Check out the films you've missed!</p> 
+            <h1>New Releases!</h1>
+            <p class="lead text-muted">Check out the new films we have arriving!</p> 
           </div>
         </section>
 
