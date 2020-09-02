@@ -1,7 +1,9 @@
 import React from "react";
+import {Link } from "react-router-dom";
 import "./App.css";
+import ModalGButton from './ModalGButton.js';
 
-export default class PersonList extends React.Component {
+export default class NowShowingGallery extends React.Component {
   render() {
     return (
       <div>
@@ -20,20 +22,23 @@ export default class PersonList extends React.Component {
           <div class="container">
             <div class="row">
               <div class="col-md-4">
+              
                 <div class="card mb-4 shadow-sm">
-                  <img
+                <Link to={"./individual/Gremlins"}>
+                 <img
                     alt="Gremlins" 
                     src={require('./images/gremlins_500px.jpg')}
                     width="100%"
                     height="100%"
                     class="img-responsive"
-                  ></img>
+                  ></img></Link>
                   <div class="card-body">
                     <p class="card-text">Blast from the Past: Gremlins</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                      <a href="/signup" role="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</a>
-                      <a href="https://www.imdb.com/title/tt0087363/" target="_blank" role="button" class="btn btn-sm btn-outline-secondary">IMDB</a>
+                        <a href="/signup" role="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</a>
+                        <a href="https://www.imdb.com/title/tt0087363/" target="_blank" role="button" class="btn btn-sm btn-outline-secondary">IMDB</a>
+                        <ModalGButton/>
                       </div>
                     </div>
                   </div>
@@ -42,19 +47,21 @@ export default class PersonList extends React.Component {
 
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                  <img
+                <Link to={"./individual/Gremlins"}>
+                 <img
                     alt="Gremlins" 
-                    src="images/gremlins_500px.png"
+                    src={require('./images/gremlins_500px.jpg')}
                     width="100%"
                     height="100%"
                     class="img-responsive"
-                  ></img>
+                  ></img></Link>
                   <div class="card-body">
                     <p class="card-text">Late night horror: Sea Fever</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                       <a href="/signup" role="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</a>
                       <a href="https://www.imdb.com/title/tt0087363/" target="_blank" role="button" class="btn btn-sm btn-outline-secondary">IMDB</a>
+                      <ModalGButton/>
                       </div>
                     </div>
                   </div>
@@ -63,19 +70,21 @@ export default class PersonList extends React.Component {
 
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                  <img
+                <Link to={"./individual/Gremlins"}>
+                 <img
                     alt="Gremlins" 
-                    src="images/gremlins_500px.png"
+                    src={require('./images/gremlins_500px.jpg')}
                     width="100%"
                     height="100%"
                     class="img-responsive"
-                  ></img>
+                  ></img></Link>
                   <div class="card-body">
                     <p class="card-text">Matinee: Howl's Moving Castle</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                       <a href="/signup" role="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</a>
                       <a href="https://www.imdb.com/title/tt0087363/" target="_blank" role="button" class="btn btn-sm btn-outline-secondary">IMDB</a>
+                      <ModalGButton/>
                       </div>
                     </div>
                   </div>
@@ -102,19 +111,21 @@ export default class PersonList extends React.Component {
                 <div class="row">
                 <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                  <img
+                <Link to={"./individual/Gremlins"}>
+                 <img
                     alt="Gremlins" 
-                    src="images/gremlins_500px.png"
+                    src={require('./images/gremlins_500px.jpg')}
                     width="100%"
                     height="100%"
                     class="img-responsive"
-                  ></img>
+                  ></img></Link>
                   <div class="card-body">
                     <p class="card-text">Blast from the past: Goonies</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                       <a href="/signup" role="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</a>
                       <a href="https://www.imdb.com/title/tt0087363/" target="_blank" role="button" class="btn btn-sm btn-outline-secondary">IMDB</a>
+                      <ModalGButton/>
                       </div>
                     </div>
                   </div>
@@ -123,19 +134,21 @@ export default class PersonList extends React.Component {
 
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                  <img
+                <Link to={"./individual/Gremlins"}>
+                 <img
                     alt="Gremlins" 
-                    src="images/gremlins_500px.png"
+                    src={require('./images/gremlins_500px.jpg')}
                     width="100%"
                     height="100%"
                     class="img-responsive"
-                  ></img>
+                  ></img></Link>
                   <div class="card-body">
                     <p class="card-text">Late night Horror: Hellraiser</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                       <a href="/signup" role="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</a>
                       <a href="https://www.imdb.com/title/tt0087363/" target="_blank" role="button" class="btn btn-sm btn-outline-secondary">IMDB</a>
+                      <ModalGButton/>
                       </div>
                     </div>
                   </div>
@@ -144,19 +157,21 @@ export default class PersonList extends React.Component {
 
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                  <img
+                <Link to={"./individual/Gremlins"}>
+                 <img
                     alt="Gremlins" 
-                    src="images/gremlins_500px.png"
+                    src={require('./images/gremlins_500px.jpg')}
                     width="100%"
                     height="100%"
                     class="img-responsive"
-                  ></img>
+                  ></img></Link>
                   <div class="card-body">
                     <p class="card-text">Matinee: Spririted Away</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                       <a href="/signup" role="button" class="btn btn-sm btn-outline-secondary">Buy Tickets</a>
                       <a href="https://www.imdb.com/title/tt0087363/" target="_blank" role="button" class="btn btn-sm btn-outline-secondary">IMDB</a>
+                      <ModalGButton/>
                       </div>
                     </div>
                   </div>
@@ -165,7 +180,7 @@ export default class PersonList extends React.Component {
 
             </div>
           
-              {/* End of gallery cards for screen 1 */}
+              {/* End of gallery cards for screen 2 */}
            
         </div>
       </div>

@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import "./signin.css";
 import axios from 'axios';
+import cookieParser from 'cookie-parser';
 
 export default class Login extends React.Component {
   
@@ -29,7 +30,8 @@ export default class Login extends React.Component {
     event.preventDefault();
     axios.post('http://localhost:8000/login', user)
       .then((response) => {
-        console.log(response);
+        console.log(response.data.token);
+        document.cookie = `token=${response.data.token}`;
       })
       .catch((error) => {
         console.log(error);
