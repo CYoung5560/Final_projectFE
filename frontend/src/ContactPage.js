@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import "./signin.css";
 
-export default class Login extends React.Component {
+export default class ContactUs extends React.Component {
   render() {
     return (
       <div>
