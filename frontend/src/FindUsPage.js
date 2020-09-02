@@ -11,24 +11,26 @@ export default class ContactUs extends React.Component {
 
           <div class="row featurette">
             <div class="col-md-7">
-              <h3 class="featurette-heading">
+              <h4 class="featurette-heading">
                 Our address...
                 <span class="text-muted">Find us on the quay!</span>
-              </h3>
+              </h4>
               <p class="lead">
-              Anchorage 1 
-              Anchorage Quay Salford, 
-              The Quays, 
-              Manchester M50 3YJ
+                Anchorage 1 <br/>
+                Anchorage Quay Salford,<br/> 
+                The Quays, <br/>
+                Manchester <br/>
+                M50 3YJ <br/>
               </p>
             </div>
             <div class="col-md-5">
               <img
-                src="/html/pix/yingyue_stepBystep_500px.jpg"
-                width="350"
-                height="350"
+                alt="QA DriveIn front view"
+                src={require("./images/externalDriveIn_500px.jpg")}
+                width="100%"
+                height="100%"
                 class="img-responsive"
-              />
+              ></img>
             </div>
           </div>
 
@@ -36,29 +38,26 @@ export default class ContactUs extends React.Component {
 
           <div class="row featurette">
             <div class="col-md-7 order-md-2">
-              <h2 class="featurette-heading">
-                Event or not to Event?...
-                <span class="text-muted">Covid 19 creates an event void</span>
-              </h2>
+              <h4 class="featurette-heading">
+                Directions...
+                <span class="text-muted">How to get to us by public transport</span>
+              </h4>
               <p class="lead">
-                Unfortunately due to Covid 19 all our 2020 events have been
-                cancelled. However, our Etsy shop is doing fabulously and you
-                can buy all sorts of goodies on there!{" "}
+                <a href="https://tfgm.com/public-transport/tram/stops/anchorage-tram" target="_blank">Get here by tram</a><br/>
+                <a href="https://tfgm.com/public-transport/bus" target="_blank">Get here by bus</a><br/>
+                <a href="https://www.nationalrail.co.uk/stations_destinations/247895.aspx" target="_blank">Get here by train</a><br/>
               </p>
             </div>
             <div class="col-md-5 order-md-1">
-              <a
-                id="etsyLink"
-                href="https://www.etsy.com/shop/oo0SheFeltGood0oo"
-              >
+              
                 <img
-                  src="/html/pix/etsy2_4feltoons_500px.png"
-                  x="0"
-                  y="0"
-                  width="100%"
-                  height="100%"
-                />
-              </a>
+                alt="Down town public transport"
+                src={require("./images/downtown_500px.jpg")}
+                width="100%"
+                height="100%"
+                class="img-responsive"
+              ></img>
+            
             </div>
           </div>
 
@@ -66,18 +65,21 @@ export default class ContactUs extends React.Component {
 
           <div class="row featurette">
             <div class="col-md-7">
-              <h2 class="featurette-heading">
-                She Felt Good on Instagram...
+              <h4 class="featurette-heading">
+                
+                Sat Nav Savvy...
                 <span class="text-muted">
-                  Keeping up to date with all our latest posts!
+                  
+                  Find us on Google Maps!
                 </span>
-              </h2>
+              </h4>
               <p class="lead">
-                These little criters are also in the Gallery. Inspired by
-                kawaii, and collection culture.
+                Sat Nav Postcode:M50 3YJ
               </p>
             </div>
-            <div class="col-md-5"></div>
+            <div class="col-md-5">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.683115237455!2d-2.288300184730258!3d53.474123180005975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae15b3ea3473%3A0xa77a796c50c58beb!2sAnchorage!5e0!3m2!1sen!2suk!4v1599045129204!5m2!1sen!2suk" width="500" height="450" frameborder="0" style={{border:0}} allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
           </div>
 
           <hr class="featurette-divider"></hr>
