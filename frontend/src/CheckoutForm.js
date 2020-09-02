@@ -97,6 +97,22 @@ class CheckoutCardForm extends React.Component {
                             // Show success message
                             console.log("success");
                             // Create a ticket !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                            fetch('http://localhost:8000/ticket', {
+                                method: "POST",
+                                mode: "cors",
+                                // credentials: "include",
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'Authorization': 'Bearer ' + token
+                                },
+                                body: JSON.stringify({
+                                    movieTitle: 'Jackass 2',
+                                    concession: concession
+                                })
+                            }).then((response) => response.json())
+                                .then((result) => {
+                                    console.log(result);
+                                })
                             // Send request to ticket route
                             console.log(result);
                         }
@@ -115,10 +131,10 @@ class CheckoutCardForm extends React.Component {
                 <label className='w-100'>
                     Concession
                     <select id='concession'>
-                        <option value='child'>Child</option>
-                        <option value='adult'>Adult</option>
-                        <option value='senior'>Senior</option>
-                        <option value='student'>Student</option>
+                        <option value='Child'>Child</option>
+                        <option value='Adult'>Adult</option>
+                        <option value='Senior'>Senior</option>
+                        <option value='Student'>Student</option>
                     </select>
                 </label>
                 <button disabled={!this.props.stripe} >Confirm order</button>
