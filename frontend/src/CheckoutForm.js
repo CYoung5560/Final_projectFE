@@ -60,7 +60,6 @@ class CheckoutCardForm extends React.Component {
         }
 
         const concession = document.getElementById("concession").value;
-        console.log(concession);
 
         const token = this.getToken();
         fetch('http://localhost:8000/payment', {
@@ -76,7 +75,7 @@ class CheckoutCardForm extends React.Component {
             })
         }).then((response) => response.json())
             .then((response) => {
-                console.log(response);
+                console.log(`Request success to /payment`);
                 return response;
             })
             .then(({ client_secret, username }) => {
@@ -88,7 +87,7 @@ class CheckoutCardForm extends React.Component {
                         }
                     }
                 }).then((result) => {
-
+                    console.log(`Request success to confirmCardPayment`);
                     if (result.error) {
                         console.log(result.error.message);
                     } else {
@@ -107,14 +106,15 @@ class CheckoutCardForm extends React.Component {
                                 },
                                 body: JSON.stringify({
                                     movieTitle: 'Jackass 2',
-                                    concession: concession
+                                    concession: concession,
+                                    transId: result.paymentIntent.payment_method
                                 })
                             }).then((response) => response.json())
                                 .then((result) => {
-                                    console.log(result);
-                                })
+                                    console.log(`Ticket: ${result}`);
+                                });
                             // Send request to ticket route
-                            console.log(result);
+                            // console.log(result);
                         }
                     }
                 });
