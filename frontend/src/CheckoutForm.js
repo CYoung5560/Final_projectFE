@@ -111,7 +111,7 @@ class CheckoutCardForm extends React.Component {
                                 })
                             }).then((response) => response.json())
                                 .then((result) => {
-                                    console.log(`Ticket: ${result}`);
+                                    console.log(result);
                                 });
                             // Send request to ticket route
                             // console.log(result);
