@@ -37,6 +37,10 @@ const CARD_ELEMENT_OPTIONS = {
 
 class CheckoutCardForm extends React.Component {
 
+    constructor(props) {
+        super(props);
+    }
+
     getToken = () => {
         const token = document.cookie.split('; ')
             .find(row => row.startsWith('token')).split('=')[1];
@@ -49,23 +53,27 @@ class CheckoutCardForm extends React.Component {
 
         const { stripe, elements } = this.props;
 
-        // console.log(elements.getElement());
-
         if (!stripe || !elements) {
             // Stripe.js not yet loaded
             // disable form submission until loaded
             return;
         }
 
+        const concession = document.getElementById("concession").value;
+        console.log(concession);
+
         const token = this.getToken();
-        console.log(token);
         fetch('http://localhost:8000/payment', {
             method: "POST",
             mode: "cors",
             // credentials: "include",
             headers: {
+                'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + token
-            }
+            },
+            body: JSON.stringify({
+                concession: concession
+            })
         }).then((response) => response.json())
             .then((response) => {
                 console.log(response);
@@ -88,6 +96,9 @@ class CheckoutCardForm extends React.Component {
                         if (result.paymentIntent.status === 'succeeded') {
                             // Show success message
                             console.log("success");
+                            // Create a ticket !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                            // Send request to ticket route
+                            console.log(result);
                         }
                     }
                 });
@@ -100,6 +111,15 @@ class CheckoutCardForm extends React.Component {
                 <label className='w-100'>
                     Card details
                     <CardElement options={CARD_ELEMENT_OPTIONS} />
+                </label>
+                <label className='w-100'>
+                    Concession
+                    <select id='concession'>
+                        <option value='child'>Child</option>
+                        <option value='adult'>Adult</option>
+                        <option value='senior'>Senior</option>
+                        <option value='student'>Student</option>
+                    </select>
                 </label>
                 <button disabled={!this.props.stripe} >Confirm order</button>
             </form>
