@@ -6,6 +6,7 @@ import Gallery from './NowShowingGalleryPage';
 import Login from './LoginPage';
 import Signup from './SignupPage';
 import Contact from './ContactPage';
+import Ticket from './TicketPage';
 
 function HomePage(){
   return <h1> Home Page </h1>
@@ -30,7 +31,7 @@ function SignupPage(){
 }
 
 function TicketPage(){
-  return <h1> Ticket Page </h1>
+  return <h1> <Ticket/>  </h1>
 }
 
 function ContactPage(){
