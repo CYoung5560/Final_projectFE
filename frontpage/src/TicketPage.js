@@ -1,12 +1,33 @@
 import React from "react";
 import "./App.css";
 import "./signin.css";
-import DayPicker from "react-day-picker";
+import DayPickerInput from "react-day-picker/DayPickerInput";
+import { DateUtils } from "react-day-picker";
 import "react-day-picker/lib/style.css";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import {
+  Button,
+  Col,
+  Row,
+  Form,
+  InputGroup,
+  FormControl,
+} from "react-bootstrap";
+
+import dateFnsFormat from "date-fns/format";
+import dateFnsParse from "date-fns/parse";
+
+function parseDate(str, format, locale) {
+  const parsed = dateFnsParse(str, format, new Date(), { locale });
+  if (DateUtils.isDate(parsed)) {
+    return parsed;
+  }
+  return undefined;
+}
+
+function formatDate(date, format, locale) {
+  return dateFnsFormat(date, format, { locale });
+}
+const FORMAT = "dd/MM/yyyy";
 
 export default class Login extends React.Component {
   render() {
@@ -14,7 +35,7 @@ export default class Login extends React.Component {
       <Form>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridState">
-            <Form.Label>Movie</Form.Label>
+            <Form.Label column="lg">Movie</Form.Label>
             <Form.Control as="select" defaultValue="Choose...">
               <option>Choose...</option>
               <option>Gremlins</option>
@@ -27,23 +48,24 @@ export default class Login extends React.Component {
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridState">
-            <Form.Label>Date</Form.Label>
-            <DayPicker
-            // todayButton="Vandaag"
-            // selected={startDate}
-            // onChange={date => setStartDate(date)}
+            <Form.Label column="lg">Date</Form.Label>
+            <DayPickerInput
+              formatDate={formatDate}
+              format={FORMAT}
+              parseDate={parseDate}
+              placeholder={`${dateFnsFormat(new Date(), FORMAT)}`}
             />
-
-            <Form.Control as="select" defaultValue="Choose..."></Form.Control>
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridState">
-            <Form.Label>Time</Form.Label>
+            <Form.Label column="lg">Time</Form.Label>
 
-            <Form.Control as="select" defaultValue="Choose...">
-              <option>Choose...</option>
-              <option>Gremlins</option>
-            </Form.Control>
+            <InputGroup>
+              <InputGroup.Prepend>
+                <InputGroup.Radio aria-label="Radio button for following text input" />
+              </InputGroup.Prepend>
+              <FormControl aria-label="Text input with radio button" />
+            </InputGroup>
           </Form.Group>
         </Form.Row>
 
