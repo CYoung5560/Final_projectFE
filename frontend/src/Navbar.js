@@ -15,6 +15,15 @@ import Home from "./HomePage";
 import FindUs from "./FindUsPage";
 import How from "./HowItWorksPage";
 
+// For Stripe
+// import CheckoutForm from './CheckoutForm';
+// import { Elements } from '@stripe/react-stripe-js';
+// import { loadStripe } from '@stripe/stripe-js';
+// const stripePromise = loadStripe('pk_test_51HMY0fEd3ZxUQOxh20BNoEy4CSrSXrgHasSIJrln7bq9eJxea1xhfzdIJfipIZPK82EAcYZBGoHAba0ViHEL75vn00copwcpzI');
+// Below inside render/return
+// <Elements stripe={stripePromise} elements={CheckoutForm}>
+//         <CheckoutForm />
+// </Elements>
 
 function HomePage() {
   return <Home />;
@@ -103,6 +112,44 @@ export default class Navbar extends React.Component {
               {/* Dropdown */}
               <li class="nav-item">
                 <div class="dropdown">
+<<<<<<< HEAD
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    About
+              </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="/about">About Us</a>
+                    <a class="dropdown-item" href="/contact">Contact Us</a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <Link to="/gallery"><span class="navbar-brand mb-0 h1">Gallery</span></Link>
+              </li>
+              <li class="nav-item">
+                <Link to="/login"><span class="navbar-brand mb-0 h1">Login</span></Link>
+              </li>
+              <li class="nav-item">
+                <Link to="/signup"><span class="navbar-brand mb-0 h1">Signup</span></Link>
+              </li>
+              <li class="nav-item">
+                <Link to="/tickets"><span class="navbar-brand mb-0 h1">Tickets</span></Link>
+              </li>
+              <li class="nav-item">
+                <Link to="/booking"><span class="navbar-brand mb-0 h1">Booking</span></Link>
+              </li>
+            </ul>
+            {/* Search bar */}
+            <form class="form-inline my-2 my-lg-0">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              ></input>
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                Search
+            </button>
+=======
                   <button
                     class="btn btn-secondary dropdown-toggle"
                     type="button"
@@ -175,6 +222,7 @@ export default class Navbar extends React.Component {
               >
                 Search
               </button>
+>>>>>>> Pre-Dev
             </form>
           </div>
         </nav>
